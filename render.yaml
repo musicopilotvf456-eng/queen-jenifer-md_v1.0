@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: queen-jennifer-md
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+    autoDeploy: true
+    plan: free
